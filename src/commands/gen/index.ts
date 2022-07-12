@@ -1,8 +1,8 @@
 /* eslint-disable no-await-in-loop */
-import {Command} from '@oclif/core'
+import {Command, CliUx} from '@oclif/core'
 import puppeteer = require('puppeteer')
-import PDFMerger = require('pdf-merger-js')
 import fs = require('fs')
+import PDFDocument = require('pdfkit')
 
 export default class Gen extends Command {
   static description = 'Generate a PDF'
@@ -26,21 +26,24 @@ export default class Gen extends Command {
 
   async run(): Promise<void> {
     const {args} = await this.parse(Gen)
-    this.log(`Generating ${args.count}  versions of ${args.url}`)
-
     const browser = await puppeteer.launch()
-    const page = await browser.newPage()
-    page.setViewport({width: 816, height: 432, deviceScaleFactor: 2})
-    await page.goto(args.url)
+    const pdf = new PDFDocument({autoFirstPage: false})
 
-    // const merger = new PDFMerger()
+    CliUx.spinner.start(`Generating 1/${args.count} versions of ${args.url}`)
+
+    pdf.pipe(fs.createWriteStream(`envelopes-${args.count}.pdf`))
+
     for (let i = 0; i < args.count; i++) {
-      await page.reload({waitUntil: ['networkidle0', 'domcontentloaded']})
+      const page = await browser.newPage()
+      page.setViewport({width: 816, height: 432, deviceScaleFactor: 2})
+      await page.goto(args.url, {waitUntil: 'networkidle0'})
       await page.screenshot({path: `envelope${i}.png`})
-      // await merger.add(`envelope${i}.pdf`)
+      pdf.addPage({size: [816, 432], margin: 0}).image(`envelope${i}.png`, {width: 816, height: 432})
+      fs.unlink(`envelope${i}.png`, () => ({}))
+      CliUx.spinner.update(`Generating ${i}/${args.count} versions of ${args.url}`)
     }
 
     await browser.close()
-    // await merger.save(`${args.count}-envelopes.pdf`)
+    pdf.end()
   }
 }
