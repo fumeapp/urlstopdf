@@ -1,6 +1,6 @@
 {
   "name": "urlstopdf",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Generate a PDF of images that are screenshots of URLs",
   "author": "kevin olson @acidjazz",
   "bin": {
