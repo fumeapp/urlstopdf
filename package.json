@@ -19,7 +19,9 @@
   "dependencies": {
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.0.1"
+    "@oclif/plugin-plugins": "^2.0.1",
+    "pdf-merger-js": "^3.4.0",
+    "puppeteer": "^15.3.2"
   },
   "devDependencies": {
     "@oclif/test": "^2",
