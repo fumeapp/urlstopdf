@@ -29,7 +29,7 @@ export default class Gen extends Command {
     const browser = await puppeteer.launch()
     const pdf = new PDFDocument({autoFirstPage: false})
 
-    CliUx.spinner.start(`Generating 1/${args.count} versions of ${args.url}`)
+    CliUx.ux.action.start(`Generating 1/${args.count} versions of ${args.url}`)
 
     pdf.pipe(fs.createWriteStream(`envelopes-${args.count}.pdf`))
 
@@ -40,10 +40,11 @@ export default class Gen extends Command {
       await page.screenshot({path: `envelope${i}.png`})
       pdf.addPage({size: [816, 432], margin: 0}).image(`envelope${i}.png`, {width: 816, height: 432})
       fs.unlink(`envelope${i}.png`, () => ({}))
-      CliUx.spinner.update(`Generating ${i}/${args.count} versions of ${args.url}`)
+      CliUx.ux.action.start(`Generating ${i + 1}/${args.count} versions of ${args.url}`)
     }
 
     await browser.close()
     pdf.end()
+    CliUx.ux.action.stop()
   }
 }
