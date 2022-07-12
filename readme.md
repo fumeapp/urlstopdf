@@ -1,13 +1,13 @@
-urltopdf
+urlstopdf
 =================
 
 oclif example Hello World CLI
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/urltopdf.svg)](https://npmjs.org/package/urltopdf)
+[![Version](https://img.shields.io/npm/v/urlstopdf.svg)](https://npmjs.org/package/urlstopdf)
 [![CircleCI](https://circleci.com/gh/oclif/hello-world/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/hello-world/tree/main)
-[![Downloads/week](https://img.shields.io/npm/dw/urltopdf.svg)](https://npmjs.org/package/urltopdf)
-[![License](https://img.shields.io/npm/l/urltopdf.svg)](https://github.com/oclif/hello-world/blob/main/package.json)
+[![Downloads/week](https://img.shields.io/npm/dw/urlstopdf.svg)](https://npmjs.org/package/urlstopdf)
+[![License](https://img.shields.io/npm/l/urlstopdf.svg)](https://github.com/oclif/hello-world/blob/main/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
@@ -16,38 +16,38 @@ oclif example Hello World CLI
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g urltopdf
-$ urltopdf COMMAND
+$ npm install -g urlstopdf
+$ urlstopdf COMMAND
 running command...
-$ urltopdf (--version)
-urltopdf/0.0.0 darwin-arm64 node-v16.13.1
-$ urltopdf --help [COMMAND]
+$ urlstopdf (--version)
+urlstopdf/0.0.0 darwin-arm64 node-v16.13.1
+$ urlstopdf --help [COMMAND]
 USAGE
-  $ urltopdf COMMAND
+  $ urlstopdf COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`urltopdf gen URL COUNT`](#urltopdf-gen-url-count)
-* [`urltopdf help [COMMAND]`](#urltopdf-help-command)
-* [`urltopdf plugins`](#urltopdf-plugins)
-* [`urltopdf plugins:install PLUGIN...`](#urltopdf-pluginsinstall-plugin)
-* [`urltopdf plugins:inspect PLUGIN...`](#urltopdf-pluginsinspect-plugin)
-* [`urltopdf plugins:install PLUGIN...`](#urltopdf-pluginsinstall-plugin-1)
-* [`urltopdf plugins:link PLUGIN`](#urltopdf-pluginslink-plugin)
-* [`urltopdf plugins:uninstall PLUGIN...`](#urltopdf-pluginsuninstall-plugin)
-* [`urltopdf plugins:uninstall PLUGIN...`](#urltopdf-pluginsuninstall-plugin-1)
-* [`urltopdf plugins:uninstall PLUGIN...`](#urltopdf-pluginsuninstall-plugin-2)
-* [`urltopdf plugins update`](#urltopdf-plugins-update)
+* [`urlstopdf gen URL COUNT`](#urlstopdf-gen-url-count)
+* [`urlstopdf help [COMMAND]`](#urlstopdf-help-command)
+* [`urlstopdf plugins`](#urlstopdf-plugins)
+* [`urlstopdf plugins:install PLUGIN...`](#urlstopdf-pluginsinstall-plugin)
+* [`urlstopdf plugins:inspect PLUGIN...`](#urlstopdf-pluginsinspect-plugin)
+* [`urlstopdf plugins:install PLUGIN...`](#urlstopdf-pluginsinstall-plugin-1)
+* [`urlstopdf plugins:link PLUGIN`](#urlstopdf-pluginslink-plugin)
+* [`urlstopdf plugins:uninstall PLUGIN...`](#urlstopdf-pluginsuninstall-plugin)
+* [`urlstopdf plugins:uninstall PLUGIN...`](#urlstopdf-pluginsuninstall-plugin-1)
+* [`urlstopdf plugins:uninstall PLUGIN...`](#urlstopdf-pluginsuninstall-plugin-2)
+* [`urlstopdf plugins update`](#urlstopdf-plugins-update)
 
-## `urltopdf gen URL COUNT`
+## `urlstopdf gen URL COUNT`
 
 Generate a PDF
 
 ```
 USAGE
-  $ urltopdf gen [URL] [COUNT]
+  $ urlstopdf gen [URL] [COUNT]
 
 ARGUMENTS
   URL    URL to screenshot
@@ -57,18 +57,18 @@ DESCRIPTION
   Generate a PDF
 
 EXAMPLES
-  $ urltopdf gen https://google.com/ 16
+  $ urlstopdf gen https://google.com/ 16
 ```
 
-_See code: [dist/commands/gen/index.ts](https://github.com/fumeapp/urltopdf/blob/v0.0.0/dist/commands/gen/index.ts)_
+_See code: [dist/commands/gen/index.ts](https://github.com/fumeapp/urlstopdf/blob/v0.0.0/dist/commands/gen/index.ts)_
 
-## `urltopdf help [COMMAND]`
+## `urlstopdf help [COMMAND]`
 
-Display help for urltopdf.
+Display help for urlstopdf.
 
 ```
 USAGE
-  $ urltopdf help [COMMAND] [-n]
+  $ urlstopdf help [COMMAND] [-n]
 
 ARGUMENTS
   COMMAND  Command to show help for.
@@ -77,18 +77,18 @@ FLAGS
   -n, --nested-commands  Include all nested commands in the output.
 
 DESCRIPTION
-  Display help for urltopdf.
+  Display help for urlstopdf.
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.12/src/commands/help.ts)_
 
-## `urltopdf plugins`
+## `urlstopdf plugins`
 
 List installed plugins.
 
 ```
 USAGE
-  $ urltopdf plugins [--core]
+  $ urlstopdf plugins [--core]
 
 FLAGS
   --core  Show core plugins.
@@ -97,18 +97,18 @@ DESCRIPTION
   List installed plugins.
 
 EXAMPLES
-  $ urltopdf plugins
+  $ urlstopdf plugins
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.1.0/src/commands/plugins/index.ts)_
 
-## `urltopdf plugins:install PLUGIN...`
+## `urlstopdf plugins:install PLUGIN...`
 
 Installs a plugin into the CLI.
 
 ```
 USAGE
-  $ urltopdf plugins:install PLUGIN...
+  $ urlstopdf plugins:install PLUGIN...
 
 ARGUMENTS
   PLUGIN  Plugin to install.
@@ -130,23 +130,23 @@ DESCRIPTION
   the CLI without the need to patch and update the whole CLI.
 
 ALIASES
-  $ urltopdf plugins add
+  $ urlstopdf plugins add
 
 EXAMPLES
-  $ urltopdf plugins:install myplugin 
+  $ urlstopdf plugins:install myplugin 
 
-  $ urltopdf plugins:install https://github.com/someuser/someplugin
+  $ urlstopdf plugins:install https://github.com/someuser/someplugin
 
-  $ urltopdf plugins:install someuser/someplugin
+  $ urlstopdf plugins:install someuser/someplugin
 ```
 
-## `urltopdf plugins:inspect PLUGIN...`
+## `urlstopdf plugins:inspect PLUGIN...`
 
 Displays installation properties of a plugin.
 
 ```
 USAGE
-  $ urltopdf plugins:inspect PLUGIN...
+  $ urlstopdf plugins:inspect PLUGIN...
 
 ARGUMENTS
   PLUGIN  [default: .] Plugin to inspect.
@@ -159,16 +159,16 @@ DESCRIPTION
   Displays installation properties of a plugin.
 
 EXAMPLES
-  $ urltopdf plugins:inspect myplugin
+  $ urlstopdf plugins:inspect myplugin
 ```
 
-## `urltopdf plugins:install PLUGIN...`
+## `urlstopdf plugins:install PLUGIN...`
 
 Installs a plugin into the CLI.
 
 ```
 USAGE
-  $ urltopdf plugins:install PLUGIN...
+  $ urlstopdf plugins:install PLUGIN...
 
 ARGUMENTS
   PLUGIN  Plugin to install.
@@ -190,23 +190,23 @@ DESCRIPTION
   the CLI without the need to patch and update the whole CLI.
 
 ALIASES
-  $ urltopdf plugins add
+  $ urlstopdf plugins add
 
 EXAMPLES
-  $ urltopdf plugins:install myplugin 
+  $ urlstopdf plugins:install myplugin 
 
-  $ urltopdf plugins:install https://github.com/someuser/someplugin
+  $ urlstopdf plugins:install https://github.com/someuser/someplugin
 
-  $ urltopdf plugins:install someuser/someplugin
+  $ urlstopdf plugins:install someuser/someplugin
 ```
 
-## `urltopdf plugins:link PLUGIN`
+## `urlstopdf plugins:link PLUGIN`
 
 Links a plugin into the CLI for development.
 
 ```
 USAGE
-  $ urltopdf plugins:link PLUGIN
+  $ urlstopdf plugins:link PLUGIN
 
 ARGUMENTS
   PATH  [default: .] path to plugin
@@ -224,16 +224,16 @@ DESCRIPTION
   command will override the user-installed or core plugin implementation. This is useful for development work.
 
 EXAMPLES
-  $ urltopdf plugins:link myplugin
+  $ urlstopdf plugins:link myplugin
 ```
 
-## `urltopdf plugins:uninstall PLUGIN...`
+## `urlstopdf plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ urltopdf plugins:uninstall PLUGIN...
+  $ urlstopdf plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -246,17 +246,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ urltopdf plugins unlink
-  $ urltopdf plugins remove
+  $ urlstopdf plugins unlink
+  $ urlstopdf plugins remove
 ```
 
-## `urltopdf plugins:uninstall PLUGIN...`
+## `urlstopdf plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ urltopdf plugins:uninstall PLUGIN...
+  $ urlstopdf plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -269,17 +269,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ urltopdf plugins unlink
-  $ urltopdf plugins remove
+  $ urlstopdf plugins unlink
+  $ urlstopdf plugins remove
 ```
 
-## `urltopdf plugins:uninstall PLUGIN...`
+## `urlstopdf plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ urltopdf plugins:uninstall PLUGIN...
+  $ urlstopdf plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -292,17 +292,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ urltopdf plugins unlink
-  $ urltopdf plugins remove
+  $ urlstopdf plugins unlink
+  $ urlstopdf plugins remove
 ```
 
-## `urltopdf plugins update`
+## `urlstopdf plugins update`
 
 Update installed plugins.
 
 ```
 USAGE
-  $ urltopdf plugins update [-h] [-v]
+  $ urlstopdf plugins update [-h] [-v]
 
 FLAGS
   -h, --help     Show CLI help.

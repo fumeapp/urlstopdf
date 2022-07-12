@@ -1,17 +1,17 @@
 {
-  "name": "urltopdf",
+  "name": "urlstopdf",
   "version": "0.0.0",
   "description": "Generate a PDF of images that are screenshots of URLs",
   "author": "kevin olson @acidjazz",
   "bin": {
-    "urltopdf": "bin/run"
+    "urlstopdf": "bin/run"
   },
-  "homepage": "https://github.com/fumeapp/urltopdf",
+  "homepage": "https://github.com/fumeapp/urlstopdf",
   "license": "MIT",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fumeapp/urltopdf.git"
+    "url": "git+https://github.com/fumeapp/urlstopdf.git"
   },
   "files": [
     "/bin",
@@ -46,8 +46,8 @@
     "typescript": "^4.4.3"
   },
   "oclif": {
-    "bin": "urltopdf",
-    "dirname": "urltopdf",
+    "bin": "urlstopdf",
+    "dirname": "urlstopdf",
     "commands": "./dist/commands",
     "plugins": [
       "@oclif/plugin-help",
@@ -73,7 +73,7 @@
     "node": ">=12.0.0"
   },
   "bugs": {
-    "url": "https://github.com/fumeapp/urltopdf/issues"
+    "url": "https://github.com/fumeapp/urlstopdf/issues"
   },
   "keywords": [
     "oclif"

@@ -8,7 +8,7 @@ export default class Gen extends Command {
   static description = 'Generate a PDF'
 
   static examples = [
-    '$ urltopdf gen https://google.com/ 16',
+    '$ urlstopdf gen https://google.com/ 16',
   ]
 
   static args = [
