@@ -1,13 +1,13 @@
-oclif-hello-world
+urltopdf
 =================
 
 oclif example Hello World CLI
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
+[![Version](https://img.shields.io/npm/v/urltopdf.svg)](https://npmjs.org/package/oclif-hello-world)
 [![CircleCI](https://circleci.com/gh/oclif/hello-world/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/hello-world/tree/main)
-[![Downloads/week](https://img.shields.io/npm/dw/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
-[![License](https://img.shields.io/npm/l/oclif-hello-world.svg)](https://github.com/oclif/hello-world/blob/main/package.json)
+[![Downloads/week](https://img.shields.io/npm/dw/urltopdf.svg)](https://npmjs.org/package/oclif-hello-world)
+[![License](https://img.shields.io/npm/l/urltopdf.svg)](https://github.com/oclif/hello-world/blob/main/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
@@ -29,8 +29,7 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`urltopdf hello PERSON`](#urltopdf-hello-person)
-* [`urltopdf hello world`](#urltopdf-hello-world)
+* [`urltopdf gen URL COUNT`](#urltopdf-gen-url-count)
 * [`urltopdf help [COMMAND]`](#urltopdf-help-command)
 * [`urltopdf plugins`](#urltopdf-plugins)
 * [`urltopdf plugins:install PLUGIN...`](#urltopdf-pluginsinstall-plugin)
@@ -42,45 +41,26 @@ USAGE
 * [`urltopdf plugins:uninstall PLUGIN...`](#urltopdf-pluginsuninstall-plugin-2)
 * [`urltopdf plugins update`](#urltopdf-plugins-update)
 
-## `urltopdf hello PERSON`
+## `urltopdf gen URL COUNT`
 
-Say hello
+Generate a PDF
 
 ```
 USAGE
-  $ urltopdf hello [PERSON] -f <value>
+  $ urltopdf gen [URL] [COUNT]
 
 ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Whom is saying hello
+  URL    URL to screenshot
+  COUNT  Amount of images to generate
 
 DESCRIPTION
-  Say hello
+  Generate a PDF
 
 EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
+  $ urltopdf gen https://google.com/ 16
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/fumeapp/urltopdf/blob/v0.0.0/dist/commands/hello/index.ts)_
-
-## `urltopdf hello world`
-
-Say hello world
-
-```
-USAGE
-  $ urltopdf hello world
-
-DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ oex hello world
-  hello world! (./src/commands/hello/world.ts)
-```
+_See code: [dist/commands/gen/index.ts](https://github.com/fumeapp/urltopdf/blob/v0.0.0/dist/commands/gen/index.ts)_
 
 ## `urltopdf help [COMMAND]`
 
@@ -100,7 +80,7 @@ DESCRIPTION
   Display help for urltopdf.
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.10/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.12/src/commands/help.ts)_
 
 ## `urltopdf plugins`
 
@@ -120,7 +100,7 @@ EXAMPLES
   $ urltopdf plugins
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.0.11/src/commands/plugins/index.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.1.0/src/commands/plugins/index.ts)_
 
 ## `urltopdf plugins:install PLUGIN...`
 
